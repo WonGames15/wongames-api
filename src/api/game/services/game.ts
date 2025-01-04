@@ -2,11 +2,11 @@
  * game service
  */
 
+import { factories } from "@strapi/strapi";
 import axios from "axios";
 import { JSDOM } from "jsdom";
-import slugify from "slugify";
-import { factories } from "@strapi/strapi";
 import qs from "querystring";
+import slugify from "slugify";
 
 const gameService = "api::game.game";
 const publisherService = "api::publisher.publisher";
@@ -52,7 +52,15 @@ async function getGameInfo(slug) {
 async function getByName(name, entityService) {
   try {
     const item = await strapi.service(entityService).find({
-      filters: { name },
+      filters:
+        entityService === "api::developer.developer"
+          ? {
+              $or: [
+                { name },
+                { slug: slugify(name, { strict: true, lower: true }) },
+              ],
+            }
+          : { name },
     });
 
     return item.results.length > 0 ? item.results[0] : null;
@@ -86,6 +94,7 @@ async function createManyToManyData(products) {
 
   products.forEach((product) => {
     const { developers, publishers, genres, operatingSystems } = product;
+
     genres?.forEach(({ name }) => {
       categoriesSet.add(name);
     });
