@@ -627,6 +627,36 @@ export interface ApiPublisherPublisher extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiRecommendedRecommended extends Struct.SingleTypeSchema {
+  collectionName: 'recommendeds';
+  info: {
+    description: '';
+    displayName: 'recommended';
+    pluralName: 'recommendeds';
+    singularName: 'recommended';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended.recommended'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section: Schema.Attribute.Component<'page.popular-games', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1139,6 +1169,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::platform.platform': ApiPlatformPlatform;
       'api::publisher.publisher': ApiPublisherPublisher;
+      'api::recommended.recommended': ApiRecommendedRecommended;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
