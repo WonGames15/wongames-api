@@ -15,17 +15,13 @@
       "required": true
     },
     "background": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
       "required": true
     },
     "floatImage": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
       "required": false
@@ -40,10 +36,7 @@
     },
     "alignment": {
       "type": "enumeration",
-      "enum": [
-        "right",
-        "left"
-      ],
+      "enum": ["right", "left"],
       "default": "right"
     }
   }

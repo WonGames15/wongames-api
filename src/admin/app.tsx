@@ -1,5 +1,6 @@
 import Icon from "./extensions/icon.png";
 import Logo from "./extensions/logo.svg";
+
 export default {
   config: {
     auth: {
@@ -14,6 +15,11 @@ export default {
         "Auth.form.welcome.title": "Welcome to Won Games!",
         "Auth.form.welcome.subtitle": "Log in to your account",
         "app.components.LeftMenu.navbrand.title": "Won Games Dashboard",
+      },
+      "pt-BR": {
+        "Auth.form.welcome.title": "Bem vindo à Won Games!",
+        "Auth.form.welcome.subtitle": "Faça login em sua conta",
+        "app.components.LeftMenu.navbrand.title": "Dashboard Won Games",
       },
     },
     menu: {

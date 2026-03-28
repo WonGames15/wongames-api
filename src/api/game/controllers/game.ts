@@ -18,5 +18,5 @@ export default factories.createCoreController(
 
       ctx.send("Finished populating games!");
     },
-  })
+  }),
 );
