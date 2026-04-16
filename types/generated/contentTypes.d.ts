@@ -531,7 +531,7 @@ export interface ApiGameGame extends Struct.CollectionTypeSchema {
     >;
     release_date: Schema.Attribute.Date;
     short_description: Schema.Attribute.Text;
-    slug: Schema.Attribute.UID<'name'>;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
