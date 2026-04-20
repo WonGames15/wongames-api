@@ -660,6 +660,7 @@ export interface ApiRecommendedRecommended extends Struct.SingleTypeSchema {
 export interface ApiWishlistWishlist extends Struct.CollectionTypeSchema {
   collectionName: 'wishlists';
   info: {
+    description: '';
     displayName: 'Wishlist';
     pluralName: 'wishlists';
     singularName: 'wishlist';

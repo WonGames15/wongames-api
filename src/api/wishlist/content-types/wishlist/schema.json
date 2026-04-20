@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wishlist",
     "pluralName": "wishlists",
-    "displayName": "Wishlist"
+    "displayName": "Wishlist",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -12,10 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "user": {
-      "unique": true,
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "plugin::users-permissions.user",
+      "unique": true,
+      "column": {
+        "unique": true
+      }
     },
     "games": {
       "type": "relation",
