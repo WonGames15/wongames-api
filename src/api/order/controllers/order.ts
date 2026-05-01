@@ -38,7 +38,19 @@ export default factories.createCoreController(
         };
       }
 
-      return { total_in_cents: total * 100, games };
+      try {
+        const paymentIntent = await stripe.paymentIntents.create({
+          amount: total * 100,
+          currency: "usd",
+          metadata: { integration_check: "accept_a_payment" },
+        });
+
+        return paymentIntent;
+      } catch (err) {
+        return {
+          error: err.raw.message,
+        };
+      }
     },
   }),
 );
