@@ -3,10 +3,7 @@ export default {
     {
       method: "POST",
       path: "/games/populate",
-      handler: "game.populate",
-      // config: {
-      //   auth: false,
-      // },
+      handler: "api::game.game.populate",
     },
   ],
 };
