@@ -1,8 +1,5 @@
-/**
- * order controller
- */
-
 import { factories } from "@strapi/strapi";
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 export default factories.createCoreController(
   "api::order.order",
