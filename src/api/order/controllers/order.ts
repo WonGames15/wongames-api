@@ -24,6 +24,13 @@ export default factories.createCoreController(
         }),
       );
 
+      if (!games.length) {
+        ctx.response.status = 404;
+        return {
+          error: "No valid games found!",
+        };
+      }
+
       return games;
     },
   }),
