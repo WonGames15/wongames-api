@@ -52,5 +52,32 @@ export default factories.createCoreController(
         };
       }
     },
+
+    create: async (ctx) => {
+      // pegar as informações do frontend
+      const { cart, paymentIntentId, paymentMethod } = ctx.request.body;
+
+      // pega o token
+      const token =
+        await strapi.plugins["users-permissions"].services.jwt.getToken(ctx);
+
+      // pega o id do usuario
+      const userId = token.id;
+
+      console.log("USER", userId);
+      // pegar as informações do usuário
+      const userInfo = await strapi
+        .query("plugin::users-permissions.user")
+        .findOne({ where: { id: userId } });
+
+      // pegar os jogos
+      // pegar o total (saber se é free ou não)
+      // pegar o paymentIntentId
+      // pegar as informações do pagamento (paymentMethod)
+      // salvar no banco
+      // enviar um email da compra para o usuário
+
+      return { cart, paymentIntentId, paymentMethod, userInfo };
+    },
   }),
 );
