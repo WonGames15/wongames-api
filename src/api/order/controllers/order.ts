@@ -1,4 +1,6 @@
 import { factories } from "@strapi/strapi";
+import { cartGamesIds, cartItems, getCartTotal } from "../utils";
+
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 export default factories.createCoreController(
@@ -7,19 +9,11 @@ export default factories.createCoreController(
     async createPaymentIntent(ctx) {
       const { cart } = ctx.request.body;
 
-      let games = [];
+      // simplify cart data
+      const gamesIds = await cartGamesIds(cart);
 
-      await Promise.all(
-        cart?.map(async (game) => {
-          const validatedGame = await strapi
-            .query("api::game.game")
-            .findOne({ where: { documentId: game.documentId } });
-
-          if (validatedGame) {
-            games.push(validatedGame);
-          }
-        }),
-      );
+      // get all games
+      const games = await cartItems(gamesIds);
 
       if (!games.length) {
         ctx.response.status = 404;
@@ -28,9 +22,7 @@ export default factories.createCoreController(
         };
       }
 
-      const total = games.reduce((acc, game) => {
-        return acc + game.price;
-      }, 0);
+      const total = await getCartTotal(games);
 
       if (total === 0) {
         return {
@@ -42,7 +34,7 @@ export default factories.createCoreController(
         const paymentIntent = await stripe.paymentIntents.create({
           amount: total * 100,
           currency: "usd",
-          metadata: { integration_check: "accept_a_payment" },
+          metadata: { cart: JSON.stringify(gamesIds) },
         });
 
         return paymentIntent;
@@ -53,7 +45,7 @@ export default factories.createCoreController(
       }
     },
 
-    create: async (ctx) => {
+    async create(ctx) {
       // pegar as informações do frontend
       const { cart, paymentIntentId, paymentMethod } = ctx.request.body;
 
@@ -64,20 +56,41 @@ export default factories.createCoreController(
       // pega o id do usuario
       const userId = token.id;
 
-      console.log("USER", userId);
       // pegar as informações do usuário
       const userInfo = await strapi
         .query("plugin::users-permissions.user")
         .findOne({ where: { id: userId } });
 
+      // simplify cart data
+      const gamesIds = await cartGamesIds(cart);
+
       // pegar os jogos
+      const games = await cartItems(gamesIds);
+
       // pegar o total (saber se é free ou não)
-      // pegar o paymentIntentId
-      // pegar as informações do pagamento (paymentMethod)
+      const total_in_cents = await getCartTotal(games);
+
+      // precisa pegar do frontend os valores do paymentMethod
+      // e recuperar por aqui
+
       // salvar no banco
+      const entry = {
+        total_in_cents,
+        payment_intent_id: paymentIntentId,
+        card_brand: null,
+        card_last4: null,
+        user: userInfo,
+        games,
+      };
+
+      const entity = await strapi.service("api::order.order").create({
+        data: entry,
+        populate: ["user", "games"],
+      });
+
       // enviar um email da compra para o usuário
 
-      return { cart, paymentIntentId, paymentMethod, userInfo };
+      return this.sanitizeOutput(entity, ctx);
     },
   }),
 );

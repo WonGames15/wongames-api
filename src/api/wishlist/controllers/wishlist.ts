@@ -3,9 +3,6 @@
  */
 
 import { factories } from "@strapi/strapi";
-import { errors } from "@strapi/utils";
-
-const { ForbiddenError, UnauthorizedError } = errors;
 
 export default factories.createCoreController(
   "api::wishlist.wishlist",
