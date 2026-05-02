@@ -13,7 +13,7 @@ export default factories.createCoreController(
         cart?.map(async (game) => {
           const validatedGame = await strapi
             .query("api::game.game")
-            .findOne({ where: { id: game.id } });
+            .findOne({ where: { documentId: game.documentId } });
 
           if (validatedGame) {
             games.push(validatedGame);
