@@ -103,6 +103,24 @@ export default factories.createCoreController(
         populate: ["user", "games"],
       });
 
+      const gamesHtml = games
+        .map(
+          (game) => `
+            <li>
+              <a href="http://localhost:3000/game/${game.slug}">
+                ${game.name}
+              </a> - Price: <strong>$${Number(game.price).toFixed(2)}</strong>
+            </li>
+          `,
+        )
+        .join("");
+
+      const gamesText = games
+        .map(
+          (game) => `${game.name} - Price: $${Number(game.price).toFixed(2)}`,
+        )
+        .join("\n");
+
       // enviar um email da compra para o usuário
       await strapi.plugins["email"].services.email.sendTemplatedEmail(
         {
@@ -117,7 +135,8 @@ export default factories.createCoreController(
             card_brand: entry.card_brand,
             card_last4: entry.card_last4,
           },
-          games,
+          gamesText,
+          gamesHtml,
         },
       );
 

@@ -12,10 +12,8 @@ const text = `
   Total: <%= payment.total %>
 
   Games:
-
-  <% _.forEach(games, function(game) { %>
-    <%= game.name %> - Price: $<%= game.price %>
-  <% }); %>
+  
+  <%= gamesText %>
 `;
 
 const html = `
@@ -36,9 +34,7 @@ const html = `
   <h3>Games</h3>
 
   <ul>
-    <% _.forEach(games, function(game) { %>
-			<li><a href="http://localhost:3000/game/<%= game.slug %>"><%= game.name %></a> - Price: <strong>$<%= Number(game.price).toFixed(2) %></strong></li>
-		<% }); %>
+    <%= gamesHtml %>
   </ul>
 `;
 
