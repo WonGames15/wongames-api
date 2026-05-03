@@ -1,6 +1,5 @@
 import { factories } from "@strapi/strapi";
 import { cartGamesIds, cartItems, getCartTotal } from "../utils";
-import orderTemplate from "../../../../config/email-templates/order";
 
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
@@ -122,23 +121,28 @@ export default factories.createCoreController(
         .join("\n");
 
       // enviar um email da compra para o usuário
-      await strapi.plugins["email"].services.email.sendTemplatedEmail(
-        {
-          to: userInfo.email,
-          from: "no-reply@wongames.com",
-        },
-        orderTemplate,
-        {
-          user: userInfo,
-          payment: {
-            total: `$ ${total_in_cents / 100}`,
-            card_brand: entry.card_brand,
-            card_last4: entry.card_last4,
+      await strapi
+        .plugin("email-designer-5")
+        .service("email")
+        .sendTemplatedEmail(
+          {
+            to: userInfo.email,
+            from: "no-reply@wongames.com",
           },
-          gamesText,
-          gamesHtml,
-        },
-      );
+          {
+            templateReferenceId: 1,
+          },
+          {
+            user: userInfo,
+            payment: {
+              total: `$ ${total_in_cents / 100}`,
+              card_brand: entry.card_brand,
+              card_last4: entry.card_last4,
+            },
+            gamesText,
+            gamesHtml,
+          },
+        );
 
       return this.sanitizeOutput(entity, ctx);
     },
