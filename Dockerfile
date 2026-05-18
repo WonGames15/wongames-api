@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:20-alpine
 
 RUN apk update && apk add --no-cache \
   build-base \
