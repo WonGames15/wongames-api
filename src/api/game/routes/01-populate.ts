@@ -3,7 +3,7 @@ export default {
     {
       method: "POST",
       path: "/games/populate",
-      handler: "game.populate",
+      handler: "api::game.game.populate",
     },
   ],
 };
