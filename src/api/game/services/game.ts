@@ -85,16 +85,20 @@ async function getByName(name, entityService) {
 
 async function create(name, entityService) {
   try {
-    const item = await getByName(name, entityService);
+    let item = await getByName(name, entityService);
 
     if (!item) {
-      await strapi.service(entityService).create({
+      item = await strapi.service(entityService).create({
         data: {
           name,
           slug: slugify(name, { strict: true, lower: true }),
         },
       });
     }
+
+    const { createdAt, updatedAt, publishedAt, locale, ...rest } = item;
+
+    return item;
   } catch (error) {
     console.error("create:", Exception(error));
   }
@@ -126,12 +130,14 @@ async function createManyToManyData(products) {
   const createCall = (set, entityName) =>
     Array.from(set).map((name) => create(name, entityName));
 
-  return Promise.all([
+  const data = await Promise.all([
     ...createCall(developersSet, developerService),
     ...createCall(publishersSet, publisherService),
     ...createCall(categoriesSet, categoryService),
     ...createCall(platformsSet, platformService),
   ]);
+
+  return data;
 }
 
 async function setImage({ image, game, field = "cover" }) {
