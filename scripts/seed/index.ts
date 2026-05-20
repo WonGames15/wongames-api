@@ -24,10 +24,8 @@ export async function seed(strapiInstance) {
     if (countGames === 0) {
       await createManyToManyData(games);
 
-      const strapiUrl = process.env.STRAPI_URL ?? "http://localhost:1337";
-      const { data: uploads } = await axios.get(
-        `${strapiUrl}/api/upload/files`,
-      );
+      const uploads = await strapi.db.query("plugin::upload.file").findMany({});
+
       const hasUploads = uploads?.length > 0;
 
       // Se já houver uploads anteriores, cria todos os jogos de uma vez.

@@ -154,18 +154,21 @@ export default {
    */
   async bootstrap({ strapi }) {
     if (process.env.SEED === "true") {
-      console.log("🌱 SEED env detected, running seed...");
+      setTimeout(async () => {
+        console.log("🌱 SEED env detected, running seed...");
 
-      const maxRetries = 5;
-      for (let i = 0; i < maxRetries; i++) {
-        try {
-          await seed(strapi);
-          break;
-        } catch (error) {
-          console.log(`Seed attempt ${i + 1} failed, retrying...`);
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+        const maxRetries = 5;
+        for (let i = 0; i < maxRetries; i++) {
+          try {
+            await seed(strapi);
+            break;
+          } catch (error) {
+            console.log("ERROR STARTER SEED =>", error);
+            console.log(`Seed attempt ${i + 1} failed, retrying...`);
+            await new Promise((resolve) => setTimeout(resolve, 5000));
+          }
         }
-      }
+      }, 3000);
     } else {
       console.log("🌱 SEED env not detected, skiping seed...");
     }

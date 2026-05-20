@@ -238,9 +238,7 @@ export default factories.createCoreService("api::game.game", () => ({
       } = await axios.get(gogApiUrl);
 
       // Verifica se já existem uploads
-      const { data: uploads } = await axios.get(
-        "http://localhost:1337/api/upload/files",
-      );
+      const uploads = await strapi.db.query("plugin::upload.file").findMany({});
 
       const hasUploads = uploads?.length > 0;
       await createManyToManyData(products);
