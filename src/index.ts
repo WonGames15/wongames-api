@@ -157,7 +157,6 @@ export default {
       console.log("🌱 SEED env detected, running seed...");
 
       const maxRetries = 5;
-
       for (let i = 0; i < maxRetries; i++) {
         try {
           await seed(strapi);
