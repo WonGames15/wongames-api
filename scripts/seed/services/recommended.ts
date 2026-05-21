@@ -16,7 +16,7 @@ export async function createRecommended() {
 
   const data = {
     section: {
-      title: "Recommended Games",
+      title: "You may like these games",
       games: games.results,
       highlight: {
         title: "Cyberpunk 2077",

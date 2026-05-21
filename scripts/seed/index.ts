@@ -18,6 +18,11 @@ export async function seed(strapiInstance) {
     createUsers();
     await setPermissions();
 
+    const countBanners = await strapi.db.query(bannerService).count();
+    console.log("countBanners =>>", countBanners);
+
+    if (countBanners === 0) await createBanners(banners);
+
     const countGames = await strapi.db.query("api::game.game").count();
     console.log("countGames =>>", countGames);
 
@@ -40,11 +45,6 @@ export async function seed(strapiInstance) {
 
       await Promise.all([createHome(), createRecommended()]);
     }
-
-    const countBanners = await strapi.db.query(bannerService).count();
-    console.log("countBanners =>>", countBanners);
-
-    if (countBanners > 0) await createBanners(banners);
 
     console.log("✅ Seed finished");
   } catch (error) {
