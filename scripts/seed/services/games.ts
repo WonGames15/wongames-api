@@ -17,6 +17,7 @@ export async function createGames(products) {
       if (existing) return;
 
       console.log("CRIANDO GAME... =>", product.title);
+
       const game = await strapi.service(gameService).create({
         data: {
           name: product.title,
