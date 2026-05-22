@@ -27,7 +27,24 @@ export async function getGameInfo(slug) {
         "***************************************************************************************************************************************************",
       );
       console.log("slug:", slug);
-      console.log("ratingElement:", ratingElement);
+
+      console.log(
+        "ratingElement All",
+        console.log({
+          outerHTML: ratingElement?.outerHTML,
+          innerHTML: ratingElement?.innerHTML,
+          textContent: ratingElement?.textContent,
+          attributes: ratingElement?.getAttributeNames()?.map((attr) => ({
+            name: attr,
+            value: ratingElement.getAttribute(attr),
+          })),
+          href: ratingElement?.getAttribute("href"),
+          xlinkHref: ratingElement?.getAttribute("xlink:href"),
+          nodeName: ratingElement?.nodeName,
+          tagName: ratingElement?.tagName,
+          className: ratingElement?.className,
+        }),
+      );
       console.log("rawRating:", rawRating);
       console.log("mappedRating:", mapRating(rawRating));
       console.log(
