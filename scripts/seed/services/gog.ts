@@ -22,6 +22,20 @@ export async function getGameInfo(slug) {
           .replace("#", "")
       : "";
 
+    if (process.env.SEED === "true" && slug === "cyberpunk_2077") {
+      console.log(
+        "***************************************************************************************************************************************************",
+      );
+      console.log("slug:", slug);
+
+      console.log("xlink:href:", ratingElement?.getAttribute("xlink:href"));
+      console.log("rawRating:", rawRating);
+      console.log("mappedRating:", mapRating(rawRating));
+      console.log(
+        "***************************************************************************************************************************************************",
+      );
+    }
+
     return {
       rating: mapRating(rawRating),
       description: raw_description?.innerHTML || "",
