@@ -5,7 +5,6 @@ const permissionsPublicToEnable = {
     controllers: {
       banner: {
         find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
       },
     },
   },
@@ -39,20 +38,10 @@ const permissionsPublicToEnable = {
       },
     },
   },
-  "api::order": {
-    controllers: {
-      order: {
-        create: { enabled: true, policy: "" },
-        find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
-      },
-    },
-  },
   "api::platform": {
     controllers: {
       platform: {
         find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
       },
     },
   },
@@ -60,7 +49,6 @@ const permissionsPublicToEnable = {
     controllers: {
       publisher: {
         find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
       },
     },
   },
@@ -68,21 +56,6 @@ const permissionsPublicToEnable = {
     controllers: {
       recommended: {
         find: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "api::wishlist": {
-    controllers: {
-      wishlist: {
-        find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "plugin::email": {
-    controllers: {
-      email: {
-        send: { enabled: true, policy: "" },
       },
     },
   },
@@ -104,36 +77,12 @@ const permissionsPublicToEnable = {
         forgotPassword: { enabled: true, policy: "" },
         register: { enabled: true, policy: "" },
         emailConfirmation: { enabled: true, policy: "" },
-        sendEmailConfirmation: { enabled: true, policy: "" },
-      },
-      user: {
-        find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
-        me: { enabled: true, policy: "" },
-      },
-      role: {
-        findOne: { enabled: true, policy: "" },
-        find: { enabled: true, policy: "" },
       },
     },
   },
 };
 
 const permissionsAuthenticatedToEnable = {
-  "api::banner": {
-    controllers: {
-      banner: {
-        find: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "api::category": {
-    controllers: {
-      category: {
-        find: { enabled: true, policy: "" },
-      },
-    },
-  },
   "api::developer": {
     controllers: {
       developer: {
@@ -148,34 +97,11 @@ const permissionsAuthenticatedToEnable = {
       },
     },
   },
-  "api::home": {
-    controllers: {
-      home: {
-        find: { enabled: true, policy: "" },
-      },
-    },
-  },
   "api::order": {
     controllers: {
       order: {
         createPaymentIntent: { enabled: true, policy: "" },
         create: { enabled: true, policy: "" },
-        find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
-        update: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "api::platform": {
-    controllers: {
-      platform: {
-        find: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "api::publisher": {
-    controllers: {
-      publisher: {
         find: { enabled: true, policy: "" },
       },
     },
@@ -193,39 +119,19 @@ const permissionsAuthenticatedToEnable = {
         create: { enabled: true, policy: "" },
         update: { enabled: true, policy: "" },
         find: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "plugin::email": {
-    controllers: {
-      email: {
-        send: { enabled: true, policy: "" },
-      },
-    },
-  },
-  "plugin::upload": {
-    controllers: {
-      "content-api": {
-        find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
-        upload: { enabled: true, policy: "" },
+        // findOne: { enabled: true, policy: "" }, // Caso precise
       },
     },
   },
   "plugin::users-permissions": {
     controllers: {
       auth: {
-        changePassword: { enabled: true, policy: "" },
-        resetPassword: { enabled: true, policy: "" },
-        forgotPassword: { enabled: true, policy: "" },
-        register: { enabled: true, policy: "" },
-        sendEmailConfirmation: { enabled: true, policy: "" },
+        connect: { enabled: true, policy: "" },
       },
       user: {
-        create: { enabled: true, policy: "" },
-        update: { enabled: true, policy: "" },
         find: { enabled: true, policy: "" },
-        findOne: { enabled: true, policy: "" },
+        // findOne: { enabled: true, policy: "" }, // Caso precise
+        update: { enabled: true, policy: "" },
         me: { enabled: true, policy: "" },
       },
     },

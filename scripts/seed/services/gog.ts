@@ -14,11 +14,6 @@ export async function getGameInfo(slug) {
     const ratingElement = dom.window.document.querySelector(
       ".age-restrictions__icon use",
     );
-    console.log(
-      "***************************************************************************************************************************************************",
-    );
-    console.log("slug: ", slug);
-    console.log("ratingElement: ", ratingElement);
 
     const rawRating = ratingElement
       ? ratingElement
@@ -27,11 +22,19 @@ export async function getGameInfo(slug) {
           .replace("#", "")
       : "";
 
-    console.log("rawRating:", rawRating);
-    console.log("mappedRating:", mapRating(rawRating));
-    console.log(
-      "***************************************************************************************************************************************************",
-    );
+    if (process.env.SEED === "true") {
+      console.log(
+        "***************************************************************************************************************************************************",
+      );
+      console.log("slug:", slug);
+      console.log("ratingElement:", ratingElement);
+      console.log("rawRating:", rawRating);
+      console.log("mappedRating:", mapRating(rawRating));
+      console.log(
+        "***************************************************************************************************************************************************",
+      );
+    }
+
     return {
       rating: mapRating(rawRating),
       description: raw_description?.innerHTML || "",
