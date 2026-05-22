@@ -1,7 +1,7 @@
 export function mapRating(rating: string) {
   if (!rating) return "BR0";
 
-  if (rating.includes("18")) return "BR18";
+  if (rating.includes("18") || rating.includes("esrb_m")) return "BR18";
   if (rating.includes("16")) return "BR16";
   if (rating.includes("14")) return "BR14";
   if (rating.includes("12")) return "BR12";
