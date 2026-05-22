@@ -130,7 +130,7 @@ const permissionsAuthenticatedToEnable = {
       },
       user: {
         find: { enabled: true, policy: "" },
-        // findOne: { enabled: true, policy: "" }, // Caso precise
+        findOne: { enabled: true, policy: "" },
         update: { enabled: true, policy: "" },
         me: { enabled: true, policy: "" },
       },
