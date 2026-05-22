@@ -1,4 +1,4 @@
-import type { Core } from "@strapi/strapi";
+// import type { Core } from "@strapi/strapi";
 import { errors, sanitize } from "@strapi/utils";
 import { seed } from "../scripts/seed";
 
