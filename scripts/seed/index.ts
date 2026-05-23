@@ -16,7 +16,8 @@ export async function seed(strapiInstance) {
 
   try {
     createUsers();
-    await setPermissions();
+    // Permissões e configs ja sendo adicionadas pelo plugin: 'strapi-plugin-config-sync'
+    // await setPermissions();
 
     const countBanners = await strapi.db.query(bannerService).count();
     console.log("countBanners =>>", countBanners);
