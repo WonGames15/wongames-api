@@ -37,7 +37,6 @@ export async function setImage({
 
     // Salva em arquivo temporário
     const tmpPath = path.join(os.tmpdir(), `${Date.now()}-${filename}`);
-    console.log("tmpPath", tmpPath);
 
     fs.writeFileSync(tmpPath, buffer);
 
