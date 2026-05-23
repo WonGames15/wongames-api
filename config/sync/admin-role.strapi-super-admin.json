@@ -1,0 +1,1473 @@
+{
+  "documentId": "ei49o71501dxx9lm4pa01odo",
+  "name": "Super Admin",
+  "code": "strapi-super-admin",
+  "description": "Super Admins can access and manage all features and settings.",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "mkzih6k3oyiwgukrk6gj5l8g",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "t3omhcj2aneq1aoyv8bdryrp",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nn7c640db6mv6b16dayhvvat",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wa7zsoagwgi1sunmg02qg48o",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "onxu9n3mkmvuw2jm3xdlxd6k",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fj62xa926opf7wcycfsbcjnf",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "izbajdaftzsr7yyqdbf50g0r",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "a6tpgmxi0tqiotxmecoueqae",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ol6qc475wwoxlaspg2x07nx7",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cdmilnd8aw5n2q06xnzj58uv",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lfz9g9cqokyzs3u090rkvbzu",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cdi956q0btltfbvmjxdrk024",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "z1xzabyhfvipvoqezkdrqaxi",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "roetib9ldy53qf9ltxikijoz",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qq4hp1r7njurdvip6npbpst1",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "m46d1ndwmaputgluo89jx2v3",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ayev5eczz0jhnls1rkqrsb6o",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hd6vfh3r0ygmiponjythiuy8",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "opez1x0f6g5loew84si16y7f",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yfin7bd0z7nkczwdvfx0bq9q",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "giufu27euugunzlqnpxobcf7",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vqrpyaea72csojguybqi0ezf",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sva94bp35y2o0ll8l0ctpc13",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xhp614k0zb02qd9wmadj6ukt",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "m2rrdb94siaydszgrldoqrme",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qkdezx9i3skweds0jagg44re",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "user",
+          "games",
+          "total_in_cents",
+          "payment_intent_id",
+          "card_brand",
+          "card_last4"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "b2j6opwp96qql6ts6rozycn3",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::order.order",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "rhblckzm64zk9get03l3cf1v",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::order.order",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jxl5xmz303iuvutl7djoyw7z",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "user",
+          "games",
+          "total_in_cents",
+          "payment_intent_id",
+          "card_brand",
+          "card_last4"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "g0ie9jijvmqoucxao938mp89",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "user",
+          "games",
+          "total_in_cents",
+          "payment_intent_id",
+          "card_brand",
+          "card_last4"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "c111k81vbqq42y6yj5soa5my",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sr7fmbo3mhc0a5tupor8mdqz",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "n3du43jsyzpp9gfhpq01y0ux",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "x0h3ejkoevvg40ptjkjgvk15",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nmmu8uc2p05wsdkw9l3w7i4l",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yi5zg1elaspjszqex1niclre",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "uwtwhcmazuziutsvwj5x3lh7",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lsqqo8sz8jzb8ly5cmqww4ot",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "j6p5azsnhhgdz3vvws2qbscv",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "p18t3i9myhbhiy34d09gzelp",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dgxrz2fyqbvi7psgikemu19a",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "s6l558gwfw5kuq8t8pr7wmxj",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lohxs1bvmxa0i0j14ijm8c16",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "shhx2q5ydxl6xhwhfs3xo0x6",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jxu4fquc5ezufx64v9vm5xzk",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "o2h1ed76n43tqjndoghd6x5y",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::wishlist.wishlist",
+      "properties": {
+        "fields": [
+          "user",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "t0e661ejxgbslwo7y2f3gpkc",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::wishlist.wishlist",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vo8x3jews58rx20sdspb7iws",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::wishlist.wishlist",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "pvo33ik7dai9i4ihrrpmf1ny",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::wishlist.wishlist",
+      "properties": {
+        "fields": [
+          "user",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "rqq33oe9pa225wyae8wu7fdh",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::wishlist.wishlist",
+      "properties": {
+        "fields": [
+          "user",
+          "games"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xnq65meimrdxuz1tf9891mto",
+      "action": "admin::api-tokens.access",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "d8in3bennyblzy9vtnel1fis",
+      "action": "admin::api-tokens.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cq4zx77umqjcvfv3fgn3tfb6",
+      "action": "admin::api-tokens.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lkgdapr82ssu8r92jjie5ft0",
+      "action": "admin::api-tokens.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fxf86gqbpp0g3o1ynjupjovw",
+      "action": "admin::api-tokens.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "b2v1urx947bs77z0uiktjnvg",
+      "action": "admin::api-tokens.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "so8ij3ercwt1xjb3bxor4tdf",
+      "action": "admin::marketplace.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "iq0xivawbu3uwg9mkfpq2vmp",
+      "action": "admin::project-settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gp3o7b83ioxebm5udzn1tt16",
+      "action": "admin::project-settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ocwmre4v1xzjbauyhuwc9vos",
+      "action": "admin::roles.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wzgu0acuawofwehi2q82vh75",
+      "action": "admin::roles.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "k1fppuqp26favuh4j8am5zzl",
+      "action": "admin::roles.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wh3o6fts8snathqpxyf61jvu",
+      "action": "admin::roles.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "brqha5j8o9nmqa1x666qeqod",
+      "action": "admin::transfer.tokens.access",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ova7hvvylbnva7r1yrv5mj5q",
+      "action": "admin::transfer.tokens.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zijkswxsn7cvzfcticcf6uwe",
+      "action": "admin::transfer.tokens.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "mynrmcjx33gvsnxckddydaez",
+      "action": "admin::transfer.tokens.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xjss5ei9y660dsj75o5vntub",
+      "action": "admin::transfer.tokens.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hklstb81qglamn2zs2lhyl2l",
+      "action": "admin::transfer.tokens.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ckhw1ve868r54k7uc1sizxmt",
+      "action": "admin::users.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "oyfbrr9ppsk12u7t8n698kh8",
+      "action": "admin::users.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "q7y77llqvs1gqznigazyyf2q",
+      "action": "admin::users.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wpjzh66pn4dvxqktplugo685",
+      "action": "admin::users.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kej7c8e51adao5uxky579zb5",
+      "action": "admin::webhooks.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ydts156ihbr0o4gg6jt6g7a8",
+      "action": "admin::webhooks.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vu46davt1ix7k2kr2koh465w",
+      "action": "admin::webhooks.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "olp8v05hbxvq130ro3slt89k",
+      "action": "admin::webhooks.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wdgftlf6zmzxzzajj15tivir",
+      "action": "plugin::config-sync.menu-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qyvd209qsh7ci2aioa6vke51",
+      "action": "plugin::config-sync.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "a0pwy4ep0lfnwdbwx9o06yqr",
+      "action": "plugin::content-manager.collection-types.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ps66rjhr1t89gx6ewosaf3vm",
+      "action": "plugin::content-manager.components.configure-layout",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "axp99kp93td4bnvy42duu30j",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "plugin::email-designer-5.email-designer-template-version",
+      "properties": {
+        "fields": [
+          "templateId",
+          "versionNumber",
+          "design",
+          "name",
+          "subject",
+          "bodyHtml",
+          "bodyText",
+          "tags",
+          "changedBy",
+          "changeReason",
+          "changesSummary"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "e3d5yfp6bv3be9rvog6qzsgj",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::email-designer-5.email-designer-template-version",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "tl5ynm12fp6qu67tg3x91fvq",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "plugin::email-designer-5.email-designer-template-version",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "coa0twxniyd98wfxvm692e95",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::email-designer-5.email-designer-template-version",
+      "properties": {
+        "fields": [
+          "templateId",
+          "versionNumber",
+          "design",
+          "name",
+          "subject",
+          "bodyHtml",
+          "bodyText",
+          "tags",
+          "changedBy",
+          "changeReason",
+          "changesSummary"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lj5kkqtt8cgdq3d1kdtrl7y7",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::email-designer-5.email-designer-template-version",
+      "properties": {
+        "fields": [
+          "templateId",
+          "versionNumber",
+          "design",
+          "name",
+          "subject",
+          "bodyHtml",
+          "bodyText",
+          "tags",
+          "changedBy",
+          "changeReason",
+          "changesSummary"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hfslhww0cg177gjn4iq4bedq",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "mapaahx47pzy098y54wjnt5p",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jioy7kq6aupffd6mit2ahe76",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "r3kscfsol72h0v7iycjukyox",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "q1tnz4ye9vapya3vr95qciv5",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ktpgvrvt3u2vvdzghnfx8n2q",
+      "action": "plugin::content-manager.single-types.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dy65ochhghgs4ogtmg29bo86",
+      "action": "plugin::content-type-builder.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "aap3fd4p13vez2r5m5bc82ml",
+      "action": "plugin::email-designer-5.menu-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "bfb9jy8hwsyv9uihv9kejcl6",
+      "action": "plugin::email.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "u3nnlqzm9xbxgy6276bp5uw6",
+      "action": "plugin::i18n.locale.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "p5q2o42rnkeucw79b4b8a3oe",
+      "action": "plugin::i18n.locale.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kbyv5vdqqc5u8l90ceoj11nk",
+      "action": "plugin::i18n.locale.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zw8p0ggcrbo8xlre5r4s9xd8",
+      "action": "plugin::i18n.locale.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yt3wipw19ycf2nezuvjpttti",
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "u79t1dkgy0eci5o2c8nnnhma",
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "y31qvog7tjfbjct3gpyy9c4p",
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xjypdw4taec38eaigxelte9o",
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "p3cgfjv0sewj1dqa9k033pbw",
+      "action": "plugin::upload.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xbt889g101vm3nkjti4gqsqa",
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "rjxjxv60oxwbpfmgtvayv8mp",
+      "action": "plugin::upload.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "e3hodrj9g0hu6nxosp3u9nw0",
+      "action": "plugin::users-permissions.advanced-settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kx2p7cex8r83oaui5xvbrztn",
+      "action": "plugin::users-permissions.advanced-settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "pvc4wffa4c2twq3jk8mnfkaa",
+      "action": "plugin::users-permissions.email-templates.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lubx8h2rzr6nsac5tw9qhpqr",
+      "action": "plugin::users-permissions.email-templates.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "urams9j84i9qbkz2p3u89gpx",
+      "action": "plugin::users-permissions.providers.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "e7eiehhupu1751xqfhxmm5st",
+      "action": "plugin::users-permissions.providers.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vupeph813nz1uc56g8rwtdv2",
+      "action": "plugin::users-permissions.roles.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "eqdpkskqu58stylv6z3vy82i",
+      "action": "plugin::users-permissions.roles.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kj7b97x8xwkk6nc19eeaii3x",
+      "action": "plugin::users-permissions.roles.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qtmos5qipq6wyhmhc510eze9",
+      "action": "plugin::users-permissions.roles.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    }
+  ]
+}

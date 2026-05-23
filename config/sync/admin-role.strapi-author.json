@@ -1,0 +1,719 @@
+{
+  "documentId": "ok1yuyf9cpmu8j5ec6aqhyoq",
+  "name": "Author",
+  "code": "strapi-author",
+  "description": "Authors can manage the content they have created.",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "ojfpl66r8rxycko7k1tqhes0",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "cym2bhdmhxlk2rvx87ufnqof",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "gc4zgqahvhyvwf4c1c1gcx7a",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "cjutscq445omore8yqyuiwgs",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::banner.banner",
+      "properties": {
+        "fields": [
+          "image",
+          "title",
+          "subtitle",
+          "button.label",
+          "button.link",
+          "ribbon.text",
+          "ribbon.color",
+          "ribbon.size"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "vhztnthga05n1axm3l475fik",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "f9jyn7x6li3xj740f0wj1wxc",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "owbao7h3abejaq4qaoj6ns46",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "dy2tqm85a3quvv4yl0joao26",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "x2b8ia1w7i1boc1abqxlft3y",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "dpacpo63q6695x5bcjtl702u",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "abozswxllwptsp9ej6h3cpol",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "sydeeqljj2a7ffymzz5xlm4p",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::developer.developer",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "c9dxf9wjarunutz2fdczpdp5",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "j3zqzz03zz7bb7tstccrmfyv",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "zrqxfp1y200ga4q8d01tk4m1",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "oz2ezuf94eivi56zm4jatupf",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::game.game",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "short_description",
+          "description",
+          "description_two",
+          "price",
+          "release_date",
+          "rating",
+          "cover",
+          "gallery",
+          "categories",
+          "platforms",
+          "developers",
+          "publisher"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "cqenbwhv3gx3i4dltfl1hpt6",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "uolc7cojznzowbmmzc444yx3",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "n72c2s510sxnm8xf4z94l8va",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "ebnxa8zgh53hscrwf9zvx1dw",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "newGames.title",
+          "newGames.highlight.title",
+          "newGames.highlight.subtitle",
+          "newGames.highlight.background",
+          "newGames.highlight.floatImage",
+          "newGames.highlight.buttonLabel",
+          "newGames.highlight.buttonLink",
+          "newGames.highlight.alignment",
+          "upcomingGames.title",
+          "upcomingGames.highlight.title",
+          "upcomingGames.highlight.subtitle",
+          "upcomingGames.highlight.background",
+          "upcomingGames.highlight.floatImage",
+          "upcomingGames.highlight.buttonLabel",
+          "upcomingGames.highlight.buttonLink",
+          "upcomingGames.highlight.alignment",
+          "freeGames.title",
+          "freeGames.highlight.title",
+          "freeGames.highlight.subtitle",
+          "freeGames.highlight.background",
+          "freeGames.highlight.floatImage",
+          "freeGames.highlight.buttonLabel",
+          "freeGames.highlight.buttonLink",
+          "freeGames.highlight.alignment",
+          "popularGames.title",
+          "popularGames.highlight.title",
+          "popularGames.highlight.subtitle",
+          "popularGames.highlight.background",
+          "popularGames.highlight.floatImage",
+          "popularGames.highlight.buttonLabel",
+          "popularGames.highlight.buttonLink",
+          "popularGames.highlight.alignment",
+          "popularGames.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "u4j1cttqj89zvj01ws3uskcg",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "hadc06p9ntehtx0gfuc53ko7",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "l5u8fx8wi9yo8qwrtok2f5qf",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "sf6w8rv1tuc8w7i0n41ql2mi",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::platform.platform",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "kuup5yamj2osh59vzurtvy1u",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "irbly8dtpnknfhrqfpr6s9me",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "t7x6se226awmwvywrofd5h19",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "yh9lub87yr9nci1lv05s399m",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::publisher.publisher",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "hnvw08heruzynxye8c44r92f",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "rl69o8smghu59r11nmn434wx",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "g0qrlshrjirqx8jgrxt0cbv1",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "hyek1qi7sidra830ktryv4vl",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::recommended.recommended",
+      "properties": {
+        "fields": [
+          "section.title",
+          "section.highlight.title",
+          "section.highlight.subtitle",
+          "section.highlight.background",
+          "section.highlight.floatImage",
+          "section.highlight.buttonLabel",
+          "section.highlight.buttonLink",
+          "section.highlight.alignment",
+          "section.games"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "dpk3jdm60jisjccz303b3xzk",
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "i73zk0um8i3mdjj107ri5gxt",
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hynhlefonjj92wrn6o0ui0g5",
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jn1xyh02m0gpvmy1b5iw8xec",
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    },
+    {
+      "documentId": "l323d0byscys41tx38ugiy3g",
+      "action": "plugin::upload.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "mb5uff8d0yl84dii6372oy1u",
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "locale": null
+    }
+  ]
+}

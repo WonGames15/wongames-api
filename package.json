@@ -10,7 +10,8 @@
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "cs": "config-sync"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^4.0.9",
@@ -29,6 +30,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "slugify": "^1.6.6",
+    "strapi-plugin-config-sync": "^3.2.0",
     "strapi-plugin-email-designer-5": "^0.0.9",
     "stripe": "^22.1.0",
     "styled-components": "^6.0.0",

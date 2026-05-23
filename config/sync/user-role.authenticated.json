@@ -1,0 +1,64 @@
+{
+  "documentId": "qbb7dvvmy0g4kknj1gv9q0ma",
+  "name": "Authenticated",
+  "description": "Default role given to authenticated user.",
+  "type": "authenticated",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "cn8wvqtyfq2x2ak2x5f1ddlw",
+      "action": "api::developer.developer.find",
+      "locale": null
+    },
+    {
+      "documentId": "g2ypsz2gmx1un66e4py39n25",
+      "action": "api::game.game.find",
+      "locale": null
+    },
+    {
+      "documentId": "ir88x5at40rbhr1od9cqr0iw",
+      "action": "api::order.order.create",
+      "locale": null
+    },
+    {
+      "documentId": "mji9v15nitqg3gcwpm06aqs6",
+      "action": "api::order.order.createPaymentIntent",
+      "locale": null
+    },
+    {
+      "documentId": "qy4oklnfw9pgcf1cc01z2c7s",
+      "action": "api::order.order.find",
+      "locale": null
+    },
+    {
+      "documentId": "u5s4nfnvr8nd93sfnw1gn748",
+      "action": "api::recommended.recommended.find",
+      "locale": null
+    },
+    {
+      "documentId": "f79vcufjusgny7p5qkwo2zfa",
+      "action": "api::wishlist.wishlist.create",
+      "locale": null
+    },
+    {
+      "documentId": "ar0xcy11e6r1c73jrsumfsz5",
+      "action": "api::wishlist.wishlist.find",
+      "locale": null
+    },
+    {
+      "documentId": "fo49ck76i60at43cs98kt1g7",
+      "action": "api::wishlist.wishlist.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "w0p8j2l11xcn6upxbsxvac1k",
+      "action": "api::wishlist.wishlist.update",
+      "locale": null
+    },
+    {
+      "documentId": "ogh8u9sdlc34nns6ngapte06",
+      "action": "plugin::users-permissions.auth.connect",
+      "locale": null
+    }
+  ]
+}

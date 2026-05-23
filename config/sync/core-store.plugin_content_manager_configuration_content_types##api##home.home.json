@@ -1,0 +1,176 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::home.home",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "newGames": {
+        "edit": {
+          "label": "newGames",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "newGames",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "upcomingGames": {
+        "edit": {
+          "label": "upcomingGames",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "upcomingGames",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "freeGames": {
+        "edit": {
+          "label": "freeGames",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "freeGames",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "popularGames": {
+        "edit": {
+          "label": "popularGames",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popularGames",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "newGames",
+        "upcomingGames",
+        "freeGames"
+      ],
+      "edit": [
+        [
+          {
+            "name": "newGames",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "popularGames",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "upcomingGames",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "freeGames",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::home.home"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

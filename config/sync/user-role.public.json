@@ -1,0 +1,104 @@
+{
+  "documentId": "ktjl7yk2obwjioe5wqc565lu",
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "q452z86zcqjmmzrzmf2bb046",
+      "action": "api::banner.banner.find",
+      "locale": null
+    },
+    {
+      "documentId": "f2voukcinq1fslmzla6w45fb",
+      "action": "api::category.category.find",
+      "locale": null
+    },
+    {
+      "documentId": "e1hcsn35eto2kg21k7sc9dzf",
+      "action": "api::developer.developer.find",
+      "locale": null
+    },
+    {
+      "documentId": "m0bbjemzr086rfz25mjrs1qh",
+      "action": "api::game.game.find",
+      "locale": null
+    },
+    {
+      "documentId": "bm8kebz5e8kv5pg654wojb2t",
+      "action": "api::game.game.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "xypqiwu96t5m0we8vw4kp91a",
+      "action": "api::game.game.populate",
+      "locale": null
+    },
+    {
+      "documentId": "g5ifqbe1w35eekuic7oszfy1",
+      "action": "api::home.home.find",
+      "locale": null
+    },
+    {
+      "documentId": "gi98l67k61ud151tlfx170b9",
+      "action": "api::platform.platform.find",
+      "locale": null
+    },
+    {
+      "documentId": "qolvlwmy6uzydn1kvx9la2xw",
+      "action": "api::publisher.publisher.find",
+      "locale": null
+    },
+    {
+      "documentId": "fs9dciarx5bvnh5wb7dxi9c1",
+      "action": "api::recommended.recommended.find",
+      "locale": null
+    },
+    {
+      "documentId": "cto4kmfg9l6mxgl0ghwu08mw",
+      "action": "plugin::upload.content-api.find",
+      "locale": null
+    },
+    {
+      "documentId": null,
+      "action": "plugin::upload.content-api.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "gwdw918lba8cv6d4tm6do4rc",
+      "action": "plugin::upload.content-api.upload",
+      "locale": null
+    },
+    {
+      "documentId": "ttgpp57j4ugc9mu6di286a9e",
+      "action": "plugin::users-permissions.auth.callback",
+      "locale": null
+    },
+    {
+      "documentId": "e46ic50x02t0sdah0gsc7fyj",
+      "action": "plugin::users-permissions.auth.connect",
+      "locale": null
+    },
+    {
+      "documentId": null,
+      "action": "plugin::users-permissions.auth.emailConfirmation",
+      "locale": null
+    },
+    {
+      "documentId": "upjrsu8sh9ajq9tx93ptm9th",
+      "action": "plugin::users-permissions.auth.forgotPassword",
+      "locale": null
+    },
+    {
+      "documentId": "snmyyl6jjm6j8ioez7490zaj",
+      "action": "plugin::users-permissions.auth.register",
+      "locale": null
+    },
+    {
+      "documentId": "kh76vpnazxvzak3dj6in6mqm",
+      "action": "plugin::users-permissions.auth.resetPassword",
+      "locale": null
+    }
+  ]
+}

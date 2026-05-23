@@ -1,0 +1,173 @@
+{
+  "key": "plugin_content_manager_configuration_components::page.highlight",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "title",
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subtitle": {
+        "edit": {
+          "label": "subtitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "background": {
+        "edit": {
+          "label": "background",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "background",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "floatImage": {
+        "edit": {
+          "label": "floatImage",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "floatImage",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buttonLabel": {
+        "edit": {
+          "label": "buttonLabel",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "buttonLabel",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "buttonLink": {
+        "edit": {
+          "label": "buttonLink",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "buttonLink",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "alignment": {
+        "edit": {
+          "label": "alignment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "alignment",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "title",
+        "subtitle",
+        "background"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          },
+          {
+            "name": "subtitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "background",
+            "size": 6
+          },
+          {
+            "name": "floatImage",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "buttonLabel",
+            "size": 6
+          },
+          {
+            "name": "buttonLink",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "alignment",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "page.highlight",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

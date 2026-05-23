@@ -1,0 +1,212 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::order.order",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "payment_intent_id",
+      "defaultSortBy": "payment_intent_id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "games": {
+        "edit": {
+          "label": "games",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "games",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "total_in_cents": {
+        "edit": {
+          "label": "total_in_cents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "total_in_cents",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "payment_intent_id": {
+        "edit": {
+          "label": "payment_intent_id",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "payment_intent_id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "card_brand": {
+        "edit": {
+          "label": "card_brand",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "card_brand",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "card_last4": {
+        "edit": {
+          "label": "card_last4",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "card_last4",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "user",
+        "games",
+        "total_in_cents"
+      ],
+      "edit": [
+        [
+          {
+            "name": "user",
+            "size": 6
+          },
+          {
+            "name": "games",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "total_in_cents",
+            "size": 4
+          },
+          {
+            "name": "payment_intent_id",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "card_brand",
+            "size": 6
+          },
+          {
+            "name": "card_last4",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::order.order"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
