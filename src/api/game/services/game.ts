@@ -14,12 +14,11 @@ const developerService = "api::developer.developer";
 const categoryService = "api::category.category";
 const platformService = "api::platform.platform";
 
-function timeout(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 function Exception(e) {
-  return { e, data: e.data && e.data.errors && e.data.errors };
+  return {
+    error: e?.message || e,
+    data: e?.data?.errors,
+  };
 }
 
 function mapRating(rating: string) {
@@ -37,11 +36,12 @@ function mapRating(rating: string) {
 async function getGameInfo(slug) {
   try {
     const gogSlug = slug.replaceAll("-", "_").toLowerCase();
-    const body = await axios.get(`https://www.gog.com/game/${gogSlug}`);
-    const dom = new JSDOM(body.data);
+
+    const { data } = await axios.get(`https://www.gog.com/game/${gogSlug}`);
+    const dom = new JSDOM(data);
+
     const raw_description = dom.window.document.querySelector(".description");
-    const description = raw_description.innerHTML;
-    const short_description = raw_description.textContent.slice(0, 160);
+
     const ratingElement = dom.window.document.querySelector(
       ".age-restrictions__icon use",
     );
@@ -54,12 +54,13 @@ async function getGameInfo(slug) {
       : "";
 
     return {
-      description,
-      short_description,
       rating: mapRating(rawRating),
+      description: raw_description?.innerHTML || "",
+      short_description: raw_description?.textContent?.slice(0, 160) || "",
     };
   } catch (error) {
     console.error("getGameInfo:", Exception(error));
+    return {};
   }
 }
 
@@ -67,7 +68,7 @@ async function getByName(name, entityService) {
   try {
     const item = await strapi.service(entityService).find({
       filters:
-        entityService === "api::developer.developer"
+        entityService === developerService
           ? {
               $or: [
                 { name },
@@ -96,8 +97,6 @@ async function create(name, entityService) {
       });
     }
 
-    const { createdAt, updatedAt, publishedAt, locale, ...rest } = item;
-
     return item;
   } catch (error) {
     console.error("create:", Exception(error));
@@ -113,18 +112,13 @@ async function createManyToManyData(products) {
   products.forEach((product) => {
     const { developers, publishers, genres, operatingSystems } = product;
 
-    genres?.forEach(({ name }) => {
-      categoriesSet.add(name);
-    });
-    operatingSystems?.forEach((item) => {
-      platformsSet.add(item);
-    });
-    developers?.forEach((item) => {
-      developersSet.add(item);
-    });
-    publishers?.forEach((item) => {
-      publishersSet.add(item);
-    });
+    genres?.forEach(({ name }) => categoriesSet.add(name));
+
+    operatingSystems?.forEach((item) => platformsSet.add(item));
+
+    developers?.forEach((item) => developersSet.add(item));
+
+    publishers?.forEach((item) => publishersSet.add(item));
   });
 
   const createCall = (set, entityName) =>
@@ -159,9 +153,7 @@ async function setImage({ image, game, field = "cover" }) {
       method: "POST",
       url: `http://localhost:1337/api/upload/`,
       data: formData,
-      headers: {
-        "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
-      },
+      headers: formData.getHeaders(),
     });
   } catch (error) {
     console.error("setImage:", Exception(error));
@@ -171,12 +163,12 @@ async function setImage({ image, game, field = "cover" }) {
 async function createGames(products) {
   await Promise.all(
     products.map(async (product) => {
-      const item = await getByName(product.title, gameService);
+      const existing = await getByName(product.title, gameService);
 
-      if (!item) {
+      if (!existing) {
         console.info(`Creating: ${product.title}...`);
 
-        const game = await strapi.service(`${gameService}`).create({
+        const game = await strapi.service(gameService).create({
           data: {
             name: product.title,
             slug: product.slug,
@@ -207,22 +199,26 @@ async function createGames(products) {
           },
         });
 
-        await setImage({ image: product.coverHorizontal, game });
+        if (product.coverHorizontal) {
+          await setImage({ image: product.coverHorizontal, game });
+        }
 
-        await Promise.all(
-          product.screenshots.slice(0, 5).map((url) =>
-            setImage({
-              image: `${url.replace(
-                "{formatter}",
-                "product_card_v2_mobile_slider_639",
-              )}`,
-              game,
-              field: "gallery",
-            }),
-          ),
-        );
+        if (product.screenshots?.length) {
+          await Promise.all(
+            product.screenshots.slice(0, 5).map((url) =>
+              setImage({
+                image: `${url.replace(
+                  "{formatter}",
+                  "product_card_v2_mobile_slider_639",
+                )}`,
+                game,
+                field: "gallery",
+              }),
+            ),
+          );
 
-        return game;
+          return game;
+        }
       }
     }),
   );

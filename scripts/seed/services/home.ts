@@ -83,13 +83,13 @@ export async function createHome() {
       games: popularGames.results,
 
       highlight: {
-        title: "The Witcher 3",
-        subtitle: "One of the best RPGs ever made",
+        title: "Read Dead está de de volta!",
+        subtitle: "Venha conhecer as novas aventuras de John Marston",
         background: null,
         floatImage: null,
         buttonLabel: "Buy now",
-        buttonLink: "/games/the-witcher-3",
-        alignment: "left" as const,
+        buttonLink: "/games",
+        alignment: "right" as const,
       },
     },
 
@@ -97,12 +97,12 @@ export async function createHome() {
       title: "Upcoming Games",
 
       highlight: {
-        title: "Cyberpunk 2077",
-        subtitle: "Night City awaits you",
+        title: "Borderlands 3!",
+        subtitle: "Borderlands está de volta com muitas novidades.",
         background: null,
         floatImage: null,
         buttonLabel: "Pre-order now",
-        buttonLink: "/games/cyberpunk-2077",
+        buttonLink: "/games",
         alignment: "left" as const,
       },
     },
@@ -111,8 +111,8 @@ export async function createHome() {
       title: "Free Games",
 
       highlight: {
-        title: "Play for free",
-        subtitle: "Best free games available today",
+        title: "Já conhece o clássico CS:GO?",
+        subtitle: "Jogue um dos maiores clássicos do FPS",
         background: null,
         floatImage: null,
         buttonLabel: "Play now",

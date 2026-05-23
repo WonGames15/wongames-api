@@ -77,11 +77,8 @@ export async function createManyToManyData(products) {
 
   await Promise.all([
     ...createCall(categoriesSet, categoryService),
-
     ...createCall(platformsSet, platformService),
-
     ...createCall(developersSet, developerService),
-
     ...createCall(publishersSet, publisherService),
   ]);
 }
