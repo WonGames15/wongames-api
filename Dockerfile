@@ -20,10 +20,9 @@ RUN npm ci --legacy-peer-deps
 
 COPY . .
 
-ENV NODE_ENV=production
 ENV DATABASE_CLIENT=postgres
 
-RUN npm run build
+RUN NODE_ENV=production npm run build
 
 EXPOSE 1337
 
