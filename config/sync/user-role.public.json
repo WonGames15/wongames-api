@@ -31,11 +31,6 @@
       "locale": null
     },
     {
-      "documentId": "xypqiwu96t5m0we8vw4kp91a",
-      "action": "api::game.game.populate",
-      "locale": null
-    },
-    {
       "documentId": "g5ifqbe1w35eekuic7oszfy1",
       "action": "api::home.home.find",
       "locale": null
@@ -53,21 +48,6 @@
     {
       "documentId": "fs9dciarx5bvnh5wb7dxi9c1",
       "action": "api::recommended.recommended.find",
-      "locale": null
-    },
-    {
-      "documentId": "cto4kmfg9l6mxgl0ghwu08mw",
-      "action": "plugin::upload.content-api.find",
-      "locale": null
-    },
-    {
-      "documentId": null,
-      "action": "plugin::upload.content-api.findOne",
-      "locale": null
-    },
-    {
-      "documentId": "gwdw918lba8cv6d4tm6do4rc",
-      "action": "plugin::upload.content-api.upload",
       "locale": null
     },
     {
