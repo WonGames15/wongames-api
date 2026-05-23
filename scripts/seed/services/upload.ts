@@ -1,7 +1,7 @@
 import axios from "axios";
 import fs from "fs";
+import os from "os";
 import path from "path";
-
 import { Exception } from "../utils";
 
 export async function setImage({
@@ -18,10 +18,7 @@ export async function setImage({
      * URL IMAGE
      */
     if (image.startsWith("http")) {
-      const { data } = await axios.get(image, {
-        responseType: "arraybuffer",
-      });
-
+      const { data } = await axios.get(image, { responseType: "arraybuffer" });
       buffer = Buffer.from(data, "base64");
     } else {
       /*
@@ -32,26 +29,41 @@ export async function setImage({
       buffer = fs.readFileSync(imagePath);
     }
 
-    const FormData = require("form-data");
-    const formData = new FormData();
+    // Salva em arquivo temporário
+    const tmpPath = path.join(os.tmpdir(), filename);
+    fs.writeFileSync(tmpPath, buffer);
 
-    formData.append("refId", refId);
-    formData.append("ref", ref);
-    formData.append("field", field);
+    console.log("tmpPath", tmpPath);
 
-    formData.append("files", buffer, {
-      filename,
-    });
+    // Usa o serviço interno do Strapi, sem passar pela API HTTP
+    const uploadedFiles = await strapi
+      .plugin("upload")
+      .service("upload")
+      .upload({
+        data: {
+          refId,
+          ref,
+          field,
+        },
 
-    const response = await axios.post(
-      "http://localhost:1337/api/upload",
-      formData,
-      {
-        headers: formData.getHeaders(),
-      },
-    );
+        files: {
+          path: tmpPath,
+          filepath: tmpPath,
 
-    return response.data[0];
+          name: filename,
+          originalFilename: filename,
+
+          type: "image/jpeg",
+          mimetype: "image/jpeg",
+
+          size: buffer.length,
+        },
+      });
+
+    // Remove o arquivo temporário
+    fs.unlinkSync(tmpPath);
+
+    return uploadedFiles[0];
   } catch (error) {
     console.error("setImage:", Exception(error));
   }

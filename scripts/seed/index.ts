@@ -8,6 +8,7 @@ import { createHome } from "./services/home";
 import { createRecommended } from "./services/recommended";
 import { createUsers } from "./services/users";
 import { setPermissions } from "./services/permissions";
+import { setImage } from "./services/upload";
 
 export async function seed(strapiInstance) {
   global.strapi = strapiInstance;
