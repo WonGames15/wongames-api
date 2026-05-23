@@ -30,22 +30,16 @@ export async function setImage({
     }
 
     // Salva em arquivo temporário
-    const tmpPath = path.join(os.tmpdir(), filename);
-    fs.writeFileSync(tmpPath, buffer);
-
+    const tmpPath = path.join(os.tmpdir(), `${Date.now()}-${filename}`);
     console.log("tmpPath", tmpPath);
 
-    // Usa o serviço interno do Strapi, sem passar pela API HTTP
+    fs.writeFileSync(tmpPath, buffer);
+
     const uploadedFiles = await strapi
       .plugin("upload")
       .service("upload")
       .upload({
-        data: {
-          refId,
-          ref,
-          field,
-        },
-
+        data: { refId, ref, field },
         files: {
           path: tmpPath,
           filepath: tmpPath,
@@ -61,7 +55,11 @@ export async function setImage({
       });
 
     // Remove o arquivo temporário
-    fs.unlinkSync(tmpPath);
+    try {
+      fs.unlinkSync(tmpPath);
+    } catch (e) {
+      console.error("Erro ao remover arquivo temporário");
+    }
 
     return uploadedFiles[0];
   } catch (error) {
