@@ -42,9 +42,12 @@ $ curl -X POST http://localhost:1337/games/populate
 
 # you can pass query parameters like:
 $ curl -X POST http://localhost:1337/games/populate?page=2
-$ curl -X POST http://localhost:1337/games/populate?search=simcity
-$ curl -X POST http://localhost:1337/games/populate?sort=rating&price=free
-$ curl -X POST http://localhost:1337/games/populate?availability=coming&sort=popularity
+Free:
+$ curl -X POST http://localhost:1337/games/populate?limit=10&price=between:0,0&order=desc:reviewsRating
+Upcoming:
+$ curl -X POST http://localhost:1337/games/populate?limit=10&releaseStatuses=in:upcoming&order=desc:reviewsRating
+New Arrivals:
+$ curl -X POST http://localhost:1337/games/populate?limit=10&releaseStatuses=in:new-arrival&order=desc:price
 ```
 
 ## Populate
