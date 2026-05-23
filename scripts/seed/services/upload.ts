@@ -18,15 +18,21 @@ export async function setImage({
      * URL IMAGE
      */
     if (image.startsWith("http")) {
-      const { data } = await axios.get(image, { responseType: "arraybuffer" });
-      buffer = Buffer.from(data, "base64");
+      try {
+        const { data } = await axios.get(image, {
+          responseType: "arraybuffer",
+          timeout: 10000,
+        });
+        buffer = Buffer.from(data, "base64");
+      } catch (err) {
+        console.warn(`⚠️ Skipping image (network error): ${filename}`);
+        return null; // 👈 continua o seed sem imagem
+      }
     } else {
       /*
        * LOCAL IMAGE
        */
-      const imagePath = path.resolve(image);
-
-      buffer = fs.readFileSync(imagePath);
+      buffer = fs.readFileSync(path.resolve(image));
     }
 
     // Salva em arquivo temporário
