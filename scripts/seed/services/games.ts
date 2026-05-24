@@ -55,20 +55,18 @@ export async function createGames(products) {
       }
 
       if (product.screenshots?.length) {
-        await Promise.all(
-          product.screenshots.slice(0, 5).map((url) =>
-            setImage({
-              image: url.replace(
-                "{formatter}",
-                "product_card_v2_mobile_slider_639",
-              ),
-              ref: gameService,
-              refId: game.id,
-              filename: `${game.slug}.jpg`,
-              field: "gallery",
-            }),
-          ),
-        );
+        for (const url of product.screenshots.slice(0, 5)) {
+          setImage({
+            image: url.replace(
+              "{formatter}",
+              "product_card_v2_mobile_slider_639",
+            ),
+            ref: gameService,
+            refId: game.id,
+            filename: `${game.slug}.jpg`,
+            field: "gallery",
+          });
+        }
       }
     }),
   );

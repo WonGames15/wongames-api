@@ -21,11 +21,11 @@ export async function setImage({
       try {
         const { data } = await axios.get(image, {
           responseType: "arraybuffer",
-          timeout: 10000,
+          timeout: 20000,
         });
-        buffer = Buffer.from(data, "base64");
+        buffer = Buffer.from(data);
       } catch (err) {
-        console.warn(`⚠️ Skipping image (network error): ${filename}`);
+        console.warn(`⚠️ Skipping image (network error): ${filename}: ${err}`);
         return null; // 👈 continua o seed sem imagem
       }
     } else {
@@ -68,6 +68,7 @@ export async function setImage({
 
     return uploadedFiles[0];
   } catch (error) {
-    console.error("setImage:", Exception(error));
+    console.error("setImage:", error);
+    // console.error("setImage:", Exception(error));
   }
 }
