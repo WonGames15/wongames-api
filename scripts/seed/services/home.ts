@@ -182,11 +182,11 @@ export async function createHome() {
 
           background:
             popularGamesMedia.background ||
-            home.upcomingGames.highlight.background?.id,
+            home.popularGames.highlight.background?.id,
 
           floatImage:
             popularGamesMedia.floatImage ||
-            home.upcomingGames.highlight.floatImage?.id,
+            home.popularGames.highlight.floatImage?.id,
         },
       },
 
@@ -222,11 +222,11 @@ export async function createHome() {
 
           background:
             freeGamesMedia.background ||
-            home.upcomingGames.highlight.background?.id,
+            home.freeGames.highlight.background?.id,
 
           floatImage:
             freeGamesMedia.floatImage ||
-            home.upcomingGames.highlight.floatImage?.id,
+            home.freeGames.highlight.floatImage?.id,
         },
       },
     },

@@ -56,7 +56,7 @@ export async function create(name, entityService) {
   }
 }
 
-export async function createManyToManyData(products) {
+export async function createManyToManyData(products, isProd = false) {
   const developersSet = new Set();
   const publishersSet = new Set();
   const categoriesSet = new Set();
@@ -75,10 +75,17 @@ export async function createManyToManyData(products) {
   const createCall = (set, entityName) =>
     Array.from(set).map((name) => create(name, entityName));
 
-  await Promise.all([
-    ...createCall(categoriesSet, categoryService),
-    ...createCall(platformsSet, platformService),
-    ...createCall(developersSet, developerService),
-    ...createCall(publishersSet, publisherService),
-  ]);
+  if (isProd) {
+    await Promise.all(createCall(categoriesSet, categoryService));
+    await Promise.all(createCall(platformsSet, platformService));
+    await Promise.all(createCall(developersSet, developerService));
+    await Promise.all(createCall(publishersSet, publisherService));
+  } else {
+    await Promise.all([
+      ...createCall(categoriesSet, categoryService),
+      ...createCall(platformsSet, platformService),
+      ...createCall(developersSet, developerService),
+      ...createCall(publishersSet, publisherService),
+    ]);
+  }
 }

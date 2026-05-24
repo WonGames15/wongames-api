@@ -7,13 +7,13 @@ import { bannerService } from "./constants/services";
 import { createHome } from "./services/home";
 import { createRecommended } from "./services/recommended";
 import { createUsers } from "./services/users";
-import { setPermissions } from "./services/permissions";
-import { setImage } from "./services/upload";
+// import { setPermissions } from "./services/permissions";
 
-export async function seed(strapiInstance) {
+export async function seed(strapiInstance, isProd = false) {
   global.strapi = strapiInstance;
 
   console.log("🌱 Starting seed...");
+  console.log("IsProd =>", isProd);
 
   try {
     createUsers();
@@ -29,7 +29,7 @@ export async function seed(strapiInstance) {
     console.log("countGames =>>", countGames);
 
     if (countGames === 0) {
-      await createManyToManyData(games);
+      await createManyToManyData(games, isProd);
 
       const uploads = await strapi.db.query("plugin::upload.file").findMany({});
 
@@ -39,13 +39,18 @@ export async function seed(strapiInstance) {
       // Caso contrário, cria o primeiro para gerar o upload inicial
       // e depois cria o restante.
       if (hasUploads) {
-        await createGames(games);
+        await createGames(games, isProd);
       } else {
-        await createGames([games[0]]);
-        await createGames(games.slice(1));
+        await createGames([games[0]], isProd);
+        await createGames(games.slice(1), isProd);
       }
 
-      await Promise.all([createHome(), createRecommended()]);
+      if (isProd) {
+        await createHome();
+        await createRecommended();
+      } else {
+        await Promise.all([createHome(), createRecommended()]);
+      }
     }
 
     console.log("✅ Seed finished");

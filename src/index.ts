@@ -153,14 +153,16 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }) {
-    if (process.env.SEED === "true") {
+    if (process.env.SEED === "true" || process.env.SEED_PROD === "true") {
+      const isProd = process.env.SEED_PROD === "true";
+
       setTimeout(async () => {
         console.log("🌱 SEED env detected, running seed...");
 
         const maxRetries = 5;
         for (let i = 0; i < maxRetries; i++) {
           try {
-            await seed(strapi);
+            await seed(strapi, isProd);
             break;
           } catch (error) {
             console.log("ERROR STARTER SEED =>", error);
