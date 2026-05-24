@@ -46,11 +46,6 @@
       "locale": null
     },
     {
-      "documentId": "fo49ck76i60at43cs98kt1g7",
-      "action": "api::wishlist.wishlist.findOne",
-      "locale": null
-    },
-    {
       "documentId": "w0p8j2l11xcn6upxbsxvac1k",
       "action": "api::wishlist.wishlist.update",
       "locale": null
@@ -58,6 +53,21 @@
     {
       "documentId": "ogh8u9sdlc34nns6ngapte06",
       "action": "plugin::users-permissions.auth.connect",
+      "locale": null
+    },
+    {
+      "documentId": "h8tqutkrbjlkjs1mm1d3mp4x",
+      "action": "plugin::users-permissions.user.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "vaz5h7b6t96jvenyqftnh4iy",
+      "action": "plugin::users-permissions.user.me",
+      "locale": null
+    },
+    {
+      "documentId": "bwo0zsssyvlov0wtnyn0lg1s",
+      "action": "plugin::users-permissions.user.update",
       "locale": null
     }
   ]
