@@ -22,7 +22,10 @@ export async function setImage({
         const { data } = await axios.get(image, {
           responseType: "arraybuffer",
           timeout: 20000,
+          maxContentLength: Infinity,
+          maxBodyLength: Infinity,
         });
+
         buffer = Buffer.from(data);
       } catch (err) {
         console.warn(`⚠️ Skipping image (network error): ${filename}: ${err}`);
