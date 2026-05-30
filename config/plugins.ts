@@ -19,8 +19,8 @@ export default ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: "wongames@gmail.com",
-        defaultReplyTo: "contact@gmail.com",
+        defaultFrom: "matheus150101miranda@gmail.com",
+        defaultReplyTo: "matheus150101miranda@gmail.com",
       },
     },
   },
