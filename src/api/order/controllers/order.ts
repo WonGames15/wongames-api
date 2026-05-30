@@ -127,7 +127,7 @@ export default factories.createCoreController(
         .sendTemplatedEmail(
           {
             to: userInfo.email,
-            from: "no-reply@wongames.com",
+            from: "matheus150101miranda@gmail.com",
           },
           {
             templateReferenceId: 1,
